@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WorldWideCoin (WWC)</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -27,6 +27,19 @@ header {
   border-bottom: 1px solid #E5E7EB;
 }
 
+.brand {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.brand .worldwide {
+  color: #1F2937;
+}
+
+.brand .coin {
+  color: #D4AF37;
+}
+
 nav a {
   margin-left: 25px;
   text-decoration: none;
@@ -39,7 +52,7 @@ nav a:hover {
   color: #D4AF37;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero {
   padding: 100px 20px 80px;
@@ -51,19 +64,27 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 44px;
+  font-weight: 800;
 }
 
 .inline-logo {
-  height: 50px;
+  height: 45px;
   width: auto;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
+.hero-title .worldwide {
+  color: #1F2937;
+}
+
+.hero-title .coin {
+  color: #D4AF37;
+}
+
 .subtitle {
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 25px;
+  font-size: 22px;
 }
 
 .subtitle span {
@@ -71,21 +92,22 @@ nav a:hover {
 }
 
 .hero p {
-  max-width: 700px;
-  margin: 25px auto;
-  font-size: 17px;
+  max-width: 750px;
+  margin: 30px auto;
+  font-size: 18px;
   color: #6B7280;
+  line-height: 1.6;
 }
 
 .btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 14px 32px;
+  padding: 16px 40px;
   background: #D4AF37;
   color: white;
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 6px;
+  font-weight: 700;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
@@ -139,11 +161,13 @@ footer {
   font-size: 14px;
 }
 
-/* MOBILE OPTIMIZATION */
+/* MOBILE */
 
 @media (max-width: 768px) {
+
   .hero-title {
-    font-size: 28px;
+    font-size: 30px;
+    flex-direction: column;
   }
 
   .inline-logo {
@@ -153,6 +177,7 @@ footer {
   nav {
     display: none;
   }
+
 }
 
 </style>
@@ -161,20 +186,24 @@ footer {
 <body>
 
 <header>
-  <div style="font-weight:700; font-size:18px;">WWC</div>
+
+  <div class="brand">
+    <span class="worldwide">WorldWide</span><span class="coin">Coin</span>
+  </div>
 
   <nav>
     <a href="#about">About</a>
     <a href="#features">Features</a>
     <a href="#whitepaper">Whitepaper</a>
   </nav>
+
 </header>
 
 <section class="hero">
 
   <h1 class="hero-title">
     <img src="logo.png" alt="WWC Logo" class="inline-logo">
-    WorldWideCoin
+    <span class="worldwide">WorldWide</span><span class="coin">Coin</span>
   </h1>
 
   <div class="subtitle">
@@ -182,8 +211,8 @@ footer {
   </div>
 
   <p>
-    WorldWideCoin (WWC) is a decentralized cryptocurrency engineered 
-    for sustainable long-term emission, predictable monetary policy, 
+    WorldWideCoin (WWC) is a decentralized cryptocurrency engineered for
+    sustainable long-term emission, predictable monetary policy,
     and fair CPU-based global participation.
   </p>
 
@@ -197,9 +226,9 @@ footer {
 
   <p style="text-align:center; max-width:850px; margin:auto; color:#4B5563;">
     WWC implements a 2.5% annual continuous exponential emission decay model,
-    targeting an asymptotic supply near 21 million coins. The protocol ensures
-    smooth emission reduction without disruptive halving shocks while preserving
-    long-term miner incentives.
+    targeting an asymptotic supply near 21 million coins.
+    The protocol ensures smooth emission reduction without disruptive halving shocks
+    while preserving long-term miner incentives.
   </p>
 
 </section>
@@ -239,8 +268,7 @@ footer {
   <h2>Whitepaper</h2>
 
   <p style="text-align:center; color:#6B7280;">
-    Review the complete technical specification and economic framework
-    of WorldWideCoin.
+    Review the complete technical specification and economic framework of WorldWideCoin.
   </p>
 
   <div style="text-align:center;">
