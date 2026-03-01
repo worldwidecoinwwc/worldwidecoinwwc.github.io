@@ -12,51 +12,32 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #F9FAFB;
+  background: #F3F4F6;
   color: #1F2937;
 }
 
-/* HEADER */
+/* TOP HEADER */
 
 header {
-  background: white;
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.brand {
-  font-size: 22px;
+  background: #E5E7EB;
+  padding: 20px 40px;
+  font-size: 28px;
   font-weight: 800;
 }
 
-.brand .worldwide {
+header .worldwide {
   color: #1F2937;
 }
 
-.brand .coin {
-  color: #D4AF37;
-}
-
-nav a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: #1F2937;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-nav a:hover {
+header .coin {
   color: #D4AF37;
 }
 
 /* HERO SECTION */
 
 .hero {
-  padding: 100px 20px 80px;
   text-align: center;
+  padding: 80px 20px;
 }
 
 .hero-title {
@@ -64,12 +45,13 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  font-size: 44px;
+  font-size: 48px;
   font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .inline-logo {
-  height: 45px;
+  height: 55px;
   width: auto;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
@@ -79,103 +61,68 @@ nav a:hover {
 }
 
 .hero-title .coin {
-  color: #D4AF37;
+  color: #1F2937; /* Keep full heading black like screenshot */
 }
 
+/* SUBTITLE */
+
 .subtitle {
-  margin-top: 25px;
-  font-size: 22px;
+  font-size: 28px;
+  margin-bottom: 30px;
 }
 
 .subtitle span {
-  color: #D4AF37;
+  color: #C9A227;
+  font-weight: 700;
 }
+
+/* DESCRIPTION */
 
 .hero p {
   max-width: 750px;
   margin: 30px auto;
-  font-size: 18px;
+  font-size: 20px;
   color: #6B7280;
   line-height: 1.6;
 }
 
+/* BUTTON */
+
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 16px 40px;
-  background: #D4AF37;
+  margin-top: 30px;
+  padding: 18px 50px;
+  background: #C9A227;
   color: white;
   text-decoration: none;
   font-weight: 700;
-  border-radius: 8px;
-  transition: 0.3s;
+  border-radius: 12px;
+  font-size: 20px;
 }
 
 .btn:hover {
   background: #B8962E;
 }
 
-/* SECTIONS */
-
-.section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.section h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 40px;
-}
-
-/* FEATURES */
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #E5E7EB;
-  transition: 0.3s;
-}
-
-.card:hover {
-  border-color: #D4AF37;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-/* FOOTER */
-
-footer {
-  background: white;
-  padding: 40px;
-  text-align: center;
-  border-top: 1px solid #E5E7EB;
-  color: #6B7280;
-  font-size: 14px;
-}
-
-/* MOBILE */
+/* MOBILE FIX */
 
 @media (max-width: 768px) {
 
   .hero-title {
-    font-size: 30px;
+    font-size: 32px;
     flex-direction: column;
   }
 
   .inline-logo {
-    height: 40px;
+    height: 45px;
   }
 
-  nav {
-    display: none;
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 18px;
   }
 
 }
@@ -186,17 +133,7 @@ footer {
 <body>
 
 <header>
-
-  <div class="brand">
-    <span class="worldwide">WorldWide</span><span class="coin">Coin</span>
-  </div>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#features">Features</a>
-    <a href="#whitepaper">Whitepaper</a>
-  </nav>
-
+  <span class="worldwide">WorldWide</span><span class="coin">Coin</span>
 </header>
 
 <section class="hero">
@@ -211,75 +148,14 @@ footer {
   </div>
 
   <p>
-    WorldWideCoin (WWC) is a decentralized cryptocurrency engineered for
-    sustainable long-term emission, predictable monetary policy,
-    and fair CPU-based global participation.
+    WorldWideCoin (WWC) is a decentralized cryptocurrency engineered for sustainable long-term emission, predictable monetary policy, and fair CPU-based global participation.
   </p>
 
-  <a href="whitepaper.html" class="btn">Read Technical Whitepaper</a>
+  <a href="whitepaper.html" class="btn">
+    Read Technical Whitepaper
+  </a>
 
 </section>
-
-<section id="about" class="section">
-
-  <h2>About WWC</h2>
-
-  <p style="text-align:center; max-width:850px; margin:auto; color:#4B5563;">
-    WWC implements a 2.5% annual continuous exponential emission decay model,
-    targeting an asymptotic supply near 21 million coins.
-    The protocol ensures smooth emission reduction without disruptive halving shocks
-    while preserving long-term miner incentives.
-  </p>
-
-</section>
-
-<section id="features" class="section">
-
-  <h2>Core Protocol Features</h2>
-
-  <div class="features">
-
-    <div class="card">
-      <h3>Mining-Only Distribution</h3>
-      <p>No premine. No ICO. Fair issuance through CPU-based Proof-of-Work.</p>
-    </div>
-
-    <div class="card">
-      <h3>2.5% Continuous Decay</h3>
-      <p>Smooth emission reduction without disruptive halving events.</p>
-    </div>
-
-    <div class="card">
-      <h3>20% Fee Burn</h3>
-      <p>Transaction fee burning introduces long-term deflationary pressure.</p>
-    </div>
-
-    <div class="card">
-      <h3>5% Treasury Allocation</h3>
-      <p>Sustainable ecosystem funding without centralized premine control.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="whitepaper" class="section">
-
-  <h2>Whitepaper</h2>
-
-  <p style="text-align:center; color:#6B7280;">
-    Review the complete technical specification and economic framework of WorldWideCoin.
-  </p>
-
-  <div style="text-align:center;">
-    <a href="whitepaper.html" class="btn">View Whitepaper</a>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 WorldWideCoin (WWC). All rights reserved.
-</footer>
 
 </body>
 </html>
