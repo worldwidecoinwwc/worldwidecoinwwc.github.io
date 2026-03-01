@@ -42,12 +42,10 @@ header .coin { color: #C9A227; }
   gap: 15px;
   font-size: 46px;
   font-weight: 800;
-  margin-bottom: 20px;
 }
 
 .inline-logo {
   height: 55px;
-  width: auto;
 }
 
 .subtitle {
@@ -70,7 +68,7 @@ header .coin { color: #C9A227; }
 
 .btn {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 16px 45px;
   background: #C9A227;
   color: white;
@@ -113,7 +111,18 @@ header .coin { color: #C9A227; }
 
 .card h3 {
   margin-bottom: 15px;
-  font-size: 20px;
+}
+
+/* WHITEPAPER BOX */
+
+.whitepaper-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
 
 /* FOOTER */
@@ -164,26 +173,35 @@ footer {
 
 </section>
 
-<!-- INSTITUTIONAL DESCRIPTION -->
+<!-- WHITEPAPER SECTION -->
 
 <section class="section">
 
-  <h2>Structured for Fair Access and Long-Term Stability</h2>
+  <h2>Technical Whitepaper</h2>
 
-  <p style="text-align:center; max-width:900px; margin:auto; font-size:18px; color:#4B5563; line-height:1.7;">
-    WorldWideCoin operates under a fully transparent mining-only distribution framework.
-    There are no founder allocations, no premine reserves, and no public or private token sales.
-    Supply enters circulation exclusively through decentralized Proof-of-Work validation,
-    ensuring every coin is earned rather than pre-assigned.
-    <br><br>
-    WWC is designed to be CPU-friendly, allowing participation from standard computers
-    without requiring specialized ASIC hardware. This lowers entry barriers,
-    reduces centralization risk, and enables broader global participation.
-    <br><br>
-    The 2.5% continuous annual emission decay model provides a predictable and gradual
-    reduction in block rewards, avoiding disruptive halving shocks while supporting
-    long-term network security and controlled monetary expansion.
-  </p>
+  <div class="whitepaper-box">
+
+    <p style="font-size:18px; color:#4B5563; line-height:1.7;">
+      The WorldWideCoin technical whitepaper defines the complete monetary policy,
+      emission structure, and network architecture of WWC.
+      <br><br>
+      Key parameters include:
+      <br><br>
+      • 60 second block time  
+      • 1.0 WWC initial block reward  
+      • 2.5% continuous annual emission decay  
+      • 20% transaction fee burn  
+      • Zero premine and zero ICO  
+      <br><br>
+      The model targets an asymptotic long-term supply near 21 million coins,
+      designed to support sustainable mining incentives and long-term network security.
+    </p>
+
+    <a href="WorldWideCoin_WWC_Whitepaper_v1.0.pdf" class="btn">
+      Download Whitepaper (PDF)
+    </a>
+
+  </div>
 
 </section>
 
@@ -202,7 +220,7 @@ footer {
 
     <div class="card">
       <h3>CPU-Accessible Mining</h3>
-      <p>Mine using standard hardware. No industrial-scale ASIC dominance.</p>
+      <p>Mine using standard hardware. No industrial ASIC dominance.</p>
     </div>
 
     <div class="card">
@@ -213,38 +231,6 @@ footer {
     <div class="card">
       <h3>Decentralized Global Network</h3>
       <p>Security maintained collectively by miners worldwide.</p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- HOW TO MINE -->
-
-<section id="mine" class="section">
-
-  <h2>How to Start Mining</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>1. Download Wallet</h3>
-      <p>Create your WWC wallet address.</p>
-    </div>
-
-    <div class="card">
-      <h3>2. Install Miner</h3>
-      <p>Use compatible CPU mining software.</p>
-    </div>
-
-    <div class="card">
-      <h3>3. Join Network</h3>
-      <p>Connect to a mining pool or mine independently.</p>
-    </div>
-
-    <div class="card">
-      <h3>4. Earn Rewards</h3>
-      <p>Receive WWC block rewards directly to your wallet.</p>
     </div>
 
   </div>
