@@ -5,3 +5,73 @@
   4.Difficulty Layer – keeps block time stable
   5.Networking Layer – communication between nodes
   6.Initially you will run single node on your PC, then later add networking.
+
+2. Block Structure
+Block
+ ├── index
+ ├── timestamp
+ ├── transactions
+ ├── previous_hash
+ ├── nonce
+ ├── difficulty
+ ├── merkle_root
+ └── hash
+
+| Field         | Purpose                |
+| ------------- | ---------------------- |
+| index         | block number           |
+| timestamp     | creation time          |
+| transactions  | list of transactions   |
+| previous_hash | link to previous block |
+| nonce         | mining variable        |
+| difficulty    | PoW difficulty         |
+| merkle_root   | transaction hash tree  |
+| hash          | final block hash       |
+
+3. Transaction Structure
+Transaction
+ ├── sender
+ ├── receiver
+ ├── amount
+ ├── timestamp
+ └── signature
+Later you will add cryptographic signatures to verify ownership.
+
+4. Genesis Block
+The first block must be hardcoded.
+Example message:
+"WorldWideCoin Genesis Block – Fair Mining for the World"
+
+Genesis block parameters:
+index = 0
+previous_hash = "0"
+reward = 1 WWC
+difficulty = initial difficulty
+
+5. Mining Algorithm
+For now use SHA-256 Proof-of-Work.
+Mining rule:
+  hash(block) must start with N zeros
+Example difficulty:
+  difficulty = 4
+Target example:
+  0000a3b2c1...
+
+6. Block Reward System
+Initial reward:
+  1.0 WWC
+Emission model:
+  reward = R0 × e^(-k × years)
+Where:
+  R0 = 1.0
+  k = 0.025
+  This gives 2.5% annual decay.
+
+7. Difficulty Adjustment
+Goal:
+  1 block every 60 seconds
+Adjustment every 100 blocks.
+Formula:
+  new_difficulty = old_difficulty × (actual_time / expected_time)
+Where:
+  expected_time = 100 × 60 seconds
