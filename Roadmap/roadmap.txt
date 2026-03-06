@@ -1,0 +1,18 @@
+Roadmap
+
+Example:
+2026 Q1
+Whitepaper release
+Website launch
+
+2026 Q2
+Testnet launch
+Node software
+
+2026 Q3
+Mainnet launch
+Mining pools
+
+2026 Q4
+Explorer
+Wallet releases
