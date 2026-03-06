@@ -75,3 +75,63 @@ Formula:
   new_difficulty = old_difficulty × (actual_time / expected_time)
 Where:
   expected_time = 100 × 60 seconds
+
+8. Blockchain Storage
+Initially store blockchain as:
+  chain.json
+Later upgrade to:
+  LevelDB
+
+9. Running Multiple Nodes on Your PC
+You can simulate a network.
+Example:
+  node1 → port 5000
+  node2 → port 5001
+  node3 → port 5002
+Each node will:
+• mine blocks
+• broadcast transactions
+• sync blockchain
+
+10. Test Checklist
+Before real launch test these carefully:
+  Mining works
+  Rewards correct
+  Transactions valid
+  Difficulty adjusts correctly
+  No chain corruption
+  Nodes sync correctly
+
+11. Project Folder Structure
+Your project might look like:
+  worldwidecoin/
+    block.py
+    blockchain.py
+    transaction.py
+    miner.py
+    wallet.py
+    node.py
+    network.py
+    config.py
+    main.py
+
+12. Development Timeline
+Approximate:
+
+Week 1
+Block + blockchain core
+
+Week 2
+Mining + reward system
+
+Week 3
+Transactions + wallets
+
+Week 4
+Networking nodes
+
+Week 5
+Testing + difficulty
+
+Week 6
+Testnet launch
