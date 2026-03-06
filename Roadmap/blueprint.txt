@@ -1,0 +1,7 @@
+1. WorldWideCoin Core Architecture
+  1.Block Layer – structure of blocks
+  2.Transaction Layer – transfers between wallets
+  3.Consensus Layer – Proof-of-Work mining
+  4.Difficulty Layer – keeps block time stable
+  5.Networking Layer – communication between nodes
+  6.Initially you will run single node on your PC, then later add networking.
