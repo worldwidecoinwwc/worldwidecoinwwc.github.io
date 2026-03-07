@@ -149,6 +149,16 @@ http://127.0.0.1:5000/chain
 | `/sync`          | GET    | sync chain       |
 
 
+Project strcture now
+worldwidecoin
+│
+├ wallet.py
+├ transaction.py
+├ main.py
+├ node.py
+├ cli.py
+└ chain.json
+
 What You Now Have
   Your WWC prototype now includes:
   blockchain engine
@@ -171,3 +181,25 @@ Next Real Blockchain Upgrades
   Emission decay (2.5% model)
   Mining software (separate miner)
   Block explorer
+
+
+7. Next Major Upgrades (Important)
+
+To move closer to a real cryptocurrency like Bitcoin/Monero, the next engineering steps are:
+1️⃣ Merkle tree for transactions
+2️⃣ UTXO transaction model
+3️⃣ P2P socket networking (not HTTP)
+4️⃣ Genesis block design
+5️⃣ Block validation rules
+6️⃣ Mining software
+7️⃣ Block explorer
+
+UTXO (Unspent Transaction Output) model
+    This is the core transaction system used by Bitcoin and many Proof-of-Work blockchains.
+    Right now your system uses a simple balance scan, which works for testing but has problems:
+    possible double spending
+    inefficient balance calculation
+    unrealistic blockchain behavior
+    UTXO solves these.
+  How UTXO Works
+    Instead of storing balances, the blockchain stores coins as outputs.
