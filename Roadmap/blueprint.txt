@@ -135,3 +135,39 @@ Testing + difficulty
 
 Week 6
 Testnet launch
+
+###
+Check blockchain
+http://127.0.0.1:5000/chain
+
+| Endpoint         | Method | Purpose          |
+| ---------------- | ------ | ---------------- |
+| `/chain`         | GET    | view blockchain  |
+| `/mine`          | GET    | mine block       |
+| `/transaction`   | POST   | send transaction |
+| `/register_node` | POST   | add peer         |
+| `/sync`          | GET    | sync chain       |
+
+
+What You Now Have
+  Your WWC prototype now includes:
+  blockchain engine
+  proof-of-work mining
+  wallet system
+  transactions
+  node API
+  CLI wallet
+  CLI miner
+  persistent blockchain
+  multi-node networking
+  This is now a complete minimal cryptocurrency stack.
+
+Next Real Blockchain Upgrades
+  To move closer to a production-level cryptocurrency, the next steps would be:
+  Merkle tree transaction hashing
+  UTXO transaction model
+  P2P socket networking (replace HTTP)
+  Genesis block parameters
+  Emission decay (2.5% model)
+  Mining software (separate miner)
+  Block explorer
