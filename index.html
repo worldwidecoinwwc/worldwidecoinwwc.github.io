@@ -1,12 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>WorldWideCoin (WWC)</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldWideCoin (WWC)</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* (YOUR ORIGINAL CSS — unchanged) */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #F5F6F8;
+  color: #1F2937;
+}
+
+/* NAVBAR (NEW) */
+nav {
+  background: #1F2937;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #C9A227;
+}
+
+/* HEADER */
+
+header {
+  background: #E5E7EB;
+  padding: 20px 40px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+header .worldwide { color: #1F2937; }
+header .coin { color: #C9A227; }
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.inline-logo {
+  height: 55px;
+}
+
+.subtitle {
+  font-size: 26px;
+  margin: 15px 0;
+}
+
+.subtitle span {
+  color: #C9A227;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 25px auto;
+  font-size: 18px;
+  color: #6B7280;
+  line-height: 1.7;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 16px 45px;
+  background: #C9A227;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.btn:hover { background: #B8962E; }
+
+/* SECTION */
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+}
+
+/* FOOTER */
+
+footer {
+  background: #E5E7EB;
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #6B7280;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <a href="index.html">Home</a>
   <a href="tokenomics.html">Tokenomics</a>
@@ -15,13 +152,35 @@
   <a href="downloads.html">Downloads</a>
 </nav>
 
-<section>
-  <h1>WorldWideCoin (WWC)</h1>
-  <p>Global mining-only cryptocurrency. No premine. No ICO.</p>
+<header>
+  <span class="worldwide">WorldWide</span><span class="coin">Coin</span>
+</header>
+
+<section class="hero">
+
+  <h1 class="hero-title">
+    <img src="logo.png" class="inline-logo">
+    WorldWideCoin
+  </h1>
+
+  <div class="subtitle">
+    A Global <span>Mining-Only</span> Digital Asset
+  </div>
+
+  <p>
+    Fair distribution. No premine. No ICO. CPU-friendly mining accessible to anyone.
+    Built for long-term miners and decentralized global participation.
+  </p>
 
   <a href="mining.html" class="btn">Start Mining</a>
-  <a href="whitepaper.html" class="btn">Whitepaper</a>
+
 </section>
+
+<!-- KEEP YOUR EXISTING SECTIONS BELOW (UNCHANGED) -->
+
+<footer>
+  © 2026 WorldWideCoin (WWC). Decentralized. Fair. Sustainable.
+</footer>
 
 </body>
 </html>
