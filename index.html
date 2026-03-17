@@ -68,17 +68,20 @@ header .coin { color: #C9A227; }
 
 .btn {
   display: inline-block;
-  margin-top: 25px;
-  padding: 16px 45px;
+  margin: 10px;
+  padding: 14px 35px;
   background: #C9A227;
   color: white;
   text-decoration: none;
   font-weight: 700;
   border-radius: 8px;
-  font-size: 18px;
 }
 
-.btn:hover { background: #B8962E; }
+.btn.secondary {
+  background: #1F2937;
+}
+
+.btn:hover { opacity: 0.9; }
 
 /* SECTION */
 
@@ -109,22 +112,6 @@ header .coin { color: #C9A227; }
   border: 1px solid #E5E7EB;
 }
 
-.card h3 {
-  margin-bottom: 15px;
-}
-
-/* WHITEPAPER BOX */
-
-.whitepaper-box {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  border: 1px solid #E5E7EB;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
 /* FOOTER */
 
 footer {
@@ -140,8 +127,6 @@ footer {
 @media (max-width: 768px) {
   .hero-title { font-size: 32px; flex-direction: column; }
   .inline-logo { height: 45px; }
-  .subtitle { font-size: 20px; }
-  .hero p { font-size: 16px; }
 }
 
 </style>
@@ -152,6 +137,8 @@ footer {
 <header>
   <span class="worldwide">WorldWide</span><span class="coin">Coin</span>
 </header>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -166,43 +153,42 @@ footer {
 
   <p>
     Fair distribution. No premine. No ICO. CPU-friendly mining accessible to anyone.
-    Built for long-term miners and decentralized global participation.
+    Designed for long-term decentralization and sustainable network security.
   </p>
 
   <a href="#mine" class="btn">Start Mining</a>
+  <a href="Whitepaper.pdf" class="btn secondary">Whitepaper</a>
 
 </section>
 
-<!-- WHITEPAPER SECTION -->
+<!-- TOKENOMICS -->
 
 <section class="section">
+  <h2>Tokenomics</h2>
 
-  <h2>Technical Whitepaper</h2>
+  <div class="grid">
 
-  <div class="whitepaper-box">
+    <div class="card">
+      <h3>Max Supply</h3>
+      <p>~21 Million WWC (asymptotic)</p>
+    </div>
 
-    <p style="font-size:18px; color:#4B5563; line-height:1.7;">
-      The WorldWideCoin technical whitepaper defines the complete monetary policy,
-      emission structure, and network architecture of WWC.
-      <br><br>
-      Key parameters include:
-      <br><br>
-      • 60 second block time  
-      • 1.0 WWC initial block reward  
-      • 2.5% continuous annual emission decay  
-      • 20% transaction fee burn  
-      • Zero premine and zero ICO  
-      <br><br>
-      The model targets an asymptotic long-term supply near 21 million coins,
-      designed to support sustainable mining incentives and long-term network security.
-    </p>
+    <div class="card">
+      <h3>Block Time</h3>
+      <p>60 Seconds</p>
+    </div>
 
-    <a href="Whitepaper.pdf" class="btn">
-      Download Whitepaper (PDF)
-    </a>
+    <div class="card">
+      <h3>Initial Reward</h3>
+      <p>1.0 WWC per block</p>
+    </div>
+
+    <div class="card">
+      <h3>Emission</h3>
+      <p>2.5% annual decay</p>
+    </div>
 
   </div>
-
 </section>
 
 <!-- WHY MINE -->
@@ -215,22 +201,120 @@ footer {
 
     <div class="card">
       <h3>100% Fair Distribution</h3>
-      <p>No insiders. No hidden reserves. Every coin is mined under equal rules.</p>
+      <p>No premine, no ICO, equal opportunity for all miners.</p>
     </div>
 
     <div class="card">
-      <h3>CPU-Accessible Mining</h3>
-      <p>Mine using standard hardware. No industrial ASIC dominance.</p>
+      <h3>CPU Mining</h3>
+      <p>Accessible mining without expensive ASIC hardware.</p>
     </div>
 
     <div class="card">
-      <h3>Sustainable Emission</h3>
-      <p>2.5% annual decay ensures stable and predictable long-term rewards.</p>
+      <h3>Long-Term Rewards</h3>
+      <p>Gradual emission decay supports sustainable mining.</p>
     </div>
 
     <div class="card">
-      <h3>Decentralized Global Network</h3>
-      <p>Security maintained collectively by miners worldwide.</p>
+      <h3>Decentralized Network</h3>
+      <p>Global participation ensures security and resilience.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MINING -->
+
+<section class="section" id="mine">
+
+  <h2>Start Mining</h2>
+
+  <div class="card" style="max-width:800px;margin:auto;">
+
+    <p>Mine WWC using CPU-friendly mining software.</p>
+
+<pre>
+xmrig -o pool.worldwidecoin.org -u YOUR_WALLET
+</pre>
+
+    <p>
+      Replace <b>YOUR_WALLET</b> with your WWC wallet address.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ROADMAP -->
+
+<section class="section">
+
+  <h2>Roadmap</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Phase 1</h3>
+      <p>Blockchain development & core protocol</p>
+    </div>
+
+    <div class="card">
+      <h3>Phase 2</h3>
+      <p>Testnet launch & mining validation</p>
+    </div>
+
+    <div class="card">
+      <h3>Phase 3</h3>
+      <p>Wallet, explorer & ecosystem tools</p>
+    </div>
+
+    <div class="card">
+      <h3>Phase 4</h3>
+      <p>Mainnet launch & community growth</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHITEPAPER -->
+
+<section class="section">
+
+  <h2>Technical Whitepaper</h2>
+
+  <div class="card" style="text-align:center; max-width:800px; margin:auto;">
+
+    <p>
+      Detailed documentation of WWC architecture, emission model, and consensus design.
+    </p>
+
+    <a href="Whitepaper.pdf" class="btn">
+      Download Whitepaper
+    </a>
+
+  </div>
+
+</section>
+
+<!-- LINKS -->
+
+<section class="section">
+
+  <h2>Resources</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>GitHub</h3>
+      <p>View source code and contribute.</p>
+      <a href="https://github.com/worldwidecoinwwc" class="btn">GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>Download</h3>
+      <p>Wallet and node software (coming soon).</p>
+      <a href="#" class="btn">Download</a>
     </div>
 
   </div>
@@ -238,7 +322,7 @@ footer {
 </section>
 
 <footer>
-  © 2026 WorldWideCoin (WWC). Decentralized. Fair. Sustainable.
+  © 2026 WorldWideCoin (WWC) • Open Source • Fair Launch • No Premine
 </footer>
 
 </body>
